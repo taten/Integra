@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Modelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ModeloContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProductoEstablecer" EntityType="Modelo.Producto" />
+    <EntitySet Name="ServicioEstablecer" EntityType="Modelo.Servicio" />
+  </EntityContainer>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Type="String" Name="id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="String" Name="nombre" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" />
+    <Property Type="String" Name="precio" Nullable="false" />
+    <Property Type="String" Name="descuento" Nullable="false" />
+    <Property Type="String" Name="impuesto" Nullable="false" />
+    <Property Type="String" Name="descripcion_empaque" Nullable="false" />
+    <Property Type="String" Name="peso" Nullable="false" />
+    <Property Type="String" Name="color" Nullable="false" />
+    <Property Type="String" Name="tamano" Nullable="false" />
+    <Property Type="Int32" Name="oid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Type="String" Name="id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="String" Name="nombre" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" />
+    <Property Type="String" Name="precio" Nullable="false" />
+    <Property Type="String" Name="descuento" Nullable="false" />
+    <Property Type="String" Name="impuesto" Nullable="false" />
+    <Property Type="Int32" Name="oid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

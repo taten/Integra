@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Modelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloStoreContainer">
+    <EntitySet Name="ProductoEstablecer" EntityType="Modelo.Store.ProductoEstablecer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioEstablecer" EntityType="Modelo.Store.ServicioEstablecer" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ProductoEstablecer">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descuento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="impuesto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion_empaque" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="peso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="color" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tamano" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioEstablecer">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descuento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="impuesto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+</Schema>

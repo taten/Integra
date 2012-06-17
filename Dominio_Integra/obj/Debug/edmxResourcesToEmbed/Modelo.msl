@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloStoreContainer" CdmEntityContainer="ModeloContainer">
+    <EntitySetMapping Name="ProductoEstablecer">
+      <EntityTypeMapping TypeName="IsTypeOf(Modelo.Producto)">
+        <MappingFragment StoreEntitySet="ProductoEstablecer">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+          <ScalarProperty Name="descripcion_empaque" ColumnName="descripcion_empaque" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="tamano" ColumnName="tamano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioEstablecer">
+      <EntityTypeMapping TypeName="IsTypeOf(Modelo.Servicio)">
+        <MappingFragment StoreEntitySet="ServicioEstablecer">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

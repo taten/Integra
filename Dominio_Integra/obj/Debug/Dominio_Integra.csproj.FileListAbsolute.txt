@@ -1,0 +1,6 @@
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\bin\Debug\Dominio_Integra.dll.config
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\bin\Debug\Dominio_Integra.dll
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\bin\Debug\Dominio_Integra.pdb
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\obj\Debug\Dominio_Integra.dll
+C:\Users\Martin\Documents\Visual Studio 2010\Projects\Obli_IS2\Dominio_Integra\obj\Debug\Dominio_Integra.pdb

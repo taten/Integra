@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Modelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloStoreContainer">
+    <EntitySet Name="ProductoEstablecer" EntityType="Modelo.Store.ProductoEstablecer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioEstablecer" EntityType="Modelo.Store.ServicioEstablecer" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ProductoEstablecer">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descuento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="impuesto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion_empaque" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="peso" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="color" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tamano" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioEstablecer">
+    <Key>
+      <PropertyRef Name="oid" />
+    </Key>
+    <Property Name="id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descuento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="impuesto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="oid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Modelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ModeloContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProductoEstablecer" EntityType="Modelo.Producto" />
+          <EntitySet Name="ServicioEstablecer" EntityType="Modelo.Servicio" />
+        </EntityContainer>
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <Property Type="String" Name="precio" Nullable="false" />
+          <Property Type="String" Name="descuento" Nullable="false" />
+          <Property Type="String" Name="impuesto" Nullable="false" />
+          <Property Type="String" Name="descripcion_empaque" Nullable="false" />
+          <Property Type="String" Name="peso" Nullable="false" />
+          <Property Type="String" Name="color" Nullable="false" />
+          <Property Type="String" Name="tamano" Nullable="false" />
+          <Property Type="Int32" Name="oid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Servicio">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <Property Type="String" Name="precio" Nullable="false" />
+          <Property Type="String" Name="descuento" Nullable="false" />
+          <Property Type="String" Name="impuesto" Nullable="false" />
+          <Property Type="Int32" Name="oid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloStoreContainer" CdmEntityContainer="ModeloContainer">
+    <EntitySetMapping Name="ProductoEstablecer">
+      <EntityTypeMapping TypeName="IsTypeOf(Modelo.Producto)">
+        <MappingFragment StoreEntitySet="ProductoEstablecer">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+          <ScalarProperty Name="descripcion_empaque" ColumnName="descripcion_empaque" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="tamano" ColumnName="tamano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioEstablecer">
+      <EntityTypeMapping TypeName="IsTypeOf(Modelo.Servicio)">
+        <MappingFragment StoreEntitySet="ServicioEstablecer">
+          <ScalarProperty Name="oid" ColumnName="oid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Modelo" >
+        <EntityTypeShape EntityType="Modelo.Producto" Width="1.5" PointX="2" PointY="1.75" Height="3.1340950520833326" />
+        <EntityTypeShape EntityType="Modelo.Servicio" Width="1.5" PointX="5.125" PointY="1.875" Height="2.3648893229166656" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
