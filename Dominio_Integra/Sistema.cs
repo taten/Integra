@@ -64,7 +64,7 @@ namespace Dominio_Integra
                 ok = false;
             }
 
-            if (precio < 0 || precio > 9999)
+            if (precio < 0 || precio > 99999)
             {
                 ok = false;
             }
@@ -151,7 +151,7 @@ namespace Dominio_Integra
                 ok = false;
             }
 
-            if (precio < 0 || precio >9999)
+            if (precio < 0 || precio >99999)
             { 
                 ok = false;
             }

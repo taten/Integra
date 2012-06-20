@@ -95,7 +95,7 @@ namespace Obli_IS2
                 }
                 nombre.TrimEnd();
                 nombre.TrimStart();
-                if (nombre.Length <= 10 && !string.IsNullOrEmpty(nombre))
+                if (nombre.Length <= 10 && !string.IsNullOrEmpty(nombre) && !string.IsNullOrWhiteSpace(nombre))
                 {
                     //todo ok
                 }
@@ -113,14 +113,14 @@ namespace Obli_IS2
                     ok = false;
                 }
 
-                if (precio < 0 || precio > 9999)
+                if (precio <= 0 || precio > 99999)
                 {
                     label19.Visible = true;
                     label19.Text = "valor entre 0 y 9999";
                     ok = false;
                 }
 
-                if (dto < 0 || dto > 100)
+                if (dto <= 0 || dto > 100)
                 {
                     label20.Visible = true;
                     label20.Text = "valor entre 0 y 100";
@@ -147,12 +147,19 @@ namespace Obli_IS2
                     label17.Text = "Elija un color";
                         ok = false;
                     }
-                    if (tam < 0 || tam > 8)
+                    if (tam <= 0 || tam > 8)
                     {
                         label18.Visible = true;
                     label18.Text = "valor entre 0 y 8";
                         ok = false;
                     }
+                    if (descEmpaque.Length > 250)
+                    {
+                        label15.Text = "hasta 250 caracteres";
+                        label15.Visible = true;
+                        ok = false;
+                    }
+
                     if (ok)
                     {
                         label12.Visible = false;
@@ -198,7 +205,8 @@ namespace Obli_IS2
                         label21.Visible = false;
                         label22.Visible = false;
                         DialogResult resultado = MessageBox.Show("Usted quiere registrar el siguiente " + tipo + Environment.NewLine +
-                                                       "ID: " + Id + " Nombre: " + nombre + Environment.NewLine +
+                                                       "ID: " + Id + Environment.NewLine + 
+                                                       "Nombre: " + nombre + Environment.NewLine +
                                                        "Desc: " + desc + Environment.NewLine +
                                                        "Precio : US$" + precio + Environment.NewLine +
                                                        "Impuestos: " + impuesto + "%" + Environment.NewLine +
